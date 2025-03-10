@@ -18,7 +18,7 @@ export default function Contato(){
         
         // Colocando o que o argumento vai fazer dentro da função
         evento.preventDefault()
-
+        // (*_*)
         if (nome == "" || mensagem == "") {
             notify2()
         }
