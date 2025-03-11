@@ -1,0 +1,21 @@
+.erro{
+    background-color: red;
+    color: #fff;
+    width: 14rem;
+    margin: auto;
+    height: 5cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acerto{
+    background-color: rgb(11, 201, 26);
+    color: #fff;
+    width: 14rem;
+    margin: auto;
+    height: 5cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
