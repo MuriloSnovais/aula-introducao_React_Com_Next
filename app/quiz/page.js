@@ -1,15 +1,24 @@
 'use client'
-
 import { useState } from "react";
-
+import "./quiz.css"
 
 function Quiz() {
 
     const [p1, set_p1] = useState(0)
     const [p2, set_p2] = useState(0)
     const [p3, set_p3] = useState(0)
-    const [p4, set_p4] = useState(0)
+    const [p4, set_p4] = useState("")
     const [total, set_total] = useState(0)
+
+    const [selecionado, set_selecionado] = useState(["","","",""])
+
+    function Calcular_pontos() {
+        if (p4 == "Berserk") {
+            set_total(p1+p2+p3+1)
+        }else{
+            set_total(p1+p2+p3)
+        }
+    }
 
     return ( 
         <div>
@@ -40,26 +49,17 @@ function Quiz() {
             <hr />
 
             <h2>Quanto é dez + 10</h2>
-            <ul>
-                <li>
-                <label> <input name="p3" type="radio" onChange={()=> set_p3(0)}/> 10</label>
-                </li>
-                <li>
-                <label> <input name="p3" type="radio" onChange={()=> set_p3(0)}/> 52151561</label>
-                </li>
-                <li>
-                <label> <input name="p3" type="radio" onChange={()=> set_p3(0)}/> -40</label>
-                </li>
-                <li>
-                <label> <input name="p3" type="radio" onChange={()=> set_p3(1)} /> 20</label>
-                </li>
-            </ul>
+            <p className={selecionado[0]} onClick={()=> {set_p3(0); set_selecionado(["selecionado","","",""])} }>40</p>
+            <p className={selecionado[1]} onClick={()=> {set_p3(0); set_selecionado(["","selecionado","",""])} }>19785</p>
+            <p className={selecionado[2]} onClick={()=> {set_p3(0); set_selecionado(["","","selecionado",""])} }>-10</p>
+            <p className={selecionado[3]} onClick={()=> {set_p3(1); set_selecionado(["","","","selecionado"])} }>20</p>
 
             <h2>Qual o melhor Anime</h2>
-            <label> <input name="p4" onChange={()=> p4!="Berserk" ? set_p4(0): set_p4(1)} /></label>
+
+            <input name="p4" onChange={(e)=> set_p4(e.target.value)} />
 
             <hr />
-            <button onClick={()=> set_total(p1+p2+p3+p4)}>Enviar respostas</button>
+            <button onClick={()=> Calcular_pontos()}>Enviar respostas</button>
 
             <p>Total de Pontos: {total}</p>
             
