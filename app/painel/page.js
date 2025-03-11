@@ -20,8 +20,10 @@ export default function Painel(){
     function verifica_usuario() {
         if (usuario == 'MulirinADM' && senha == "adm123"){
             set_mostra_acerto(true)
+            set_mostra_erro(false)
         }else{
             set_mostra_erro(true)
+            set_mostra_acerto(false)
         }
     }
 
