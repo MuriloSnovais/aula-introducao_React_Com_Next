@@ -4,6 +4,8 @@ import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import "./painel.css"
 import { Trykker } from "next/font/google";
+import Produtos from "../produtos/page";
+import Menu from "../produtos/components/Menu";
 
 export default function Painel(){
 

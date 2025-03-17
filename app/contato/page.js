@@ -2,6 +2,7 @@
 'use client'
 import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
+import Menu from "../produtos/components/Menu";
 
 // A função tem que ter o nome da pasta, obrigatoriamente tem que ser em maiusculo a primeira letra
 // certo: Contato errado: contato
