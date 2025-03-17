@@ -21,15 +21,22 @@ export default function Painel(){
         if (usuario == 'MulirinADM' && senha == "adm123"){
             set_mostra_acerto(true)
             set_mostra_erro(false)
+        }
+        else if(usuario == "" && senha == ""){
+            set_mostra_erro(false)
+            set_mostra_acerto(false)
         }else{
             set_mostra_erro(true)
             set_mostra_acerto(false)
         }
+        
     }
 
     return(
         <div>
             <h1>Painel de administrador</h1>
+
+            <form>
 
             <label>
                 Digite o usuario:
@@ -43,10 +50,12 @@ export default function Painel(){
                 <input type="password" onChange={(e)=> set_senha(e.target.value)}/>
             </label>
 
+            
             <br/>
 
             <button onClick={()=> verifica_usuario()}>Entrar</button>
             
+            </form>
             {
                 mostra_erro == true ? 
                 <div className="erro">

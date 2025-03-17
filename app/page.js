@@ -11,8 +11,8 @@ export default function Home() {
 {/*  */}
   return (
     <div>
-        <h1>Marirruana Do Jaka</h1>
-        <p>Melhor marirruana da city</p>
+        <h1>Loja de plantas</h1>
+        <p>Melhores plantas da cidade</p>
         <hr />
         <p className="Carrinho">Itens no Carrinho: {itens_carrinho} </p>
         {/* Usando Operadores Condicionas para não deixar a quantidade de itens no carrinho ficar negativo */}
